@@ -29,7 +29,7 @@ def part_1(input_data):
     
     return process_code(data)
 	
-def part_2(input_data):
+def part_2(input_data, goal):
     # grid search for appropriate parameters
 	# outputs answer to part 2
     for noun in range(100):
@@ -38,20 +38,19 @@ def part_2(input_data):
             data[1] = noun
             data[2] = verb
             
-            if process_code(data)==19690720:
+            if process_code(data)==goal:
                 return 100*noun + verb
 
 def main():
 	# import data, call the functions
-    import numpy as np
-
     with open('day2.txt', 'r') as f:
         data = np.array(f.read().split(','), dtype=np.int64)
     f.close()
 
     print(part_1(data))
 
-    print(part_2(data))
+	# number is a custom parameter provided by the challenge website
+    print(part_2(data), 19690720)
 
 
 if __name__=='__main__':
