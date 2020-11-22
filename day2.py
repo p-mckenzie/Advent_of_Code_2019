@@ -42,6 +42,8 @@ def part_2(input_data, goal):
                 return 100*noun + verb
 
 def main():
+    import numpy as np
+    
 	# import data, call the functions
     with open('day2.txt', 'r') as f:
         data = np.array(f.read().split(','), dtype=np.int64)
@@ -50,7 +52,7 @@ def main():
     print(part_1(data))
 
 	# number is a custom parameter provided by the challenge website
-    print(part_2(data), 19690720)
+    print(part_2(data, 19690720))
 
 
 if __name__=='__main__':
