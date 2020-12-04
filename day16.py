@@ -15,6 +15,8 @@ def part_1(txt):
     return ''.join(signal.astype(str)[:8])
     
 def part_2(txt):
+    # could be made more efficient, perhaps by using all arrays instead of converting 
+    # to string and back - maybe later
     full_input = txt*10000
 
     # only store offset onward (memory and compute hack)
@@ -40,8 +42,6 @@ def part_2(txt):
     return signal[0:8]
     
 def main():
-    import numpy as np
-
     with open('day16.txt', 'r') as f:    
         # expand input 10000x as requested
         txt = f.read().strip()
@@ -50,5 +50,6 @@ def main():
     print(part_1(txt))
     print(part_2(txt))
     
-if __name_=='__main__':
+if __name__=='__main__':
+    import numpy as np
     main()
