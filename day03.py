@@ -56,7 +56,7 @@ def part_1(locations_a, locations_b):
 
 def main():
     # import data
-    with open('day3.txt', 'r') as f:
+    with open('day03.txt', 'r') as f:
         path_1, path_2 = f.read().split()
     f.close()
 

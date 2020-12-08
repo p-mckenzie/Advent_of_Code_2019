@@ -203,7 +203,7 @@ def part_2(inp):
 def main():
     import numpy as np
 
-    with open('day7.txt', 'r') as f:
+    with open('day07.txt', 'r') as f:
         inp = np.array(f.read().split(','), dtype=np.int64)
     f.close()
 

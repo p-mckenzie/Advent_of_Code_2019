@@ -40,7 +40,7 @@ def valid_2(num):
 	
 def main():
     # import data
-    with open('day4.txt', 'r') as f:
+    with open('day04.txt', 'r') as f:
         bottom, top = f.read().split('-')
         bottom, top = int(bottom), int(top)
     f.close() 

@@ -34,7 +34,7 @@ def part_2(data, slices, input_size):
 def main():
     import numpy as np
 
-    with open('day8.txt', 'r') as f:
+    with open('day08.txt', 'r') as f:
         data = np.array(list(f.read().strip()), dtype=np.int64)
     f.close()
 

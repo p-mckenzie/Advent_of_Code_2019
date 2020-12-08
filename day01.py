@@ -24,7 +24,7 @@ def main():
 	# import data, call functions for part 1 and part 2 answers
     import numpy as np
     
-    with open('day1.txt', 'r') as f:
+    with open('day01.txt', 'r') as f:
         data = np.array(f.read().split(), dtype=np.int64)
     
     f.close()

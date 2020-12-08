@@ -31,7 +31,7 @@ def part_2(connections):
     return len(you_paths[:you_paths.index(intersection)]+santa_paths[santa_paths.index(intersection)::-1])-1
 
 def main():
-    with open('day6.txt', 'r') as f:
+    with open('day06.txt', 'r') as f:
         data = f.readlines()
     f.close()
     
