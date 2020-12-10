@@ -1,6 +1,7 @@
 class IntcodeComputer():
-    def __init__(self, dt, inputs, start=0, input_id=0, relative_base=0, vocal=False):
-        self.dt = dt
+    def __init__(self, dt, inputs=[], start=0, input_id=0, relative_base=0, vocal=False):
+        import numpy as np
+        self.dt = np.concatenate((dt, np.zeros(3000, dtype=np.int64)))
         self.inputs = inputs
         self.start = start
         self.input_id = input_id
@@ -28,10 +29,7 @@ class IntcodeComputer():
     def process_code(self):
         import numpy as np
         # performs all operations called for in the input code data (dt), using appropriate input
-        if len(self.dt)<1000:
-            data = np.concatenate((self.dt.copy(), np.zeros(1000, dtype=np.int64)))
-        else:
-            data = self.dt.copy()
+        data = self.dt.copy()
 
         # performs operations
         i = self.start
