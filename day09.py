@@ -166,7 +166,7 @@ def process_code(dt, inputs, start=0, input_id=0, relative_base=0):
 def main():
     import numpy as np
 
-    with open('day9.txt', 'r') as f:
+    with open('day09.txt', 'r') as f:
         data = np.array(f.read().strip().split(','), dtype=np.int64)
     f.close()
     

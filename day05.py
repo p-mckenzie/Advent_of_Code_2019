@@ -134,7 +134,7 @@ def process_code(dt, raw_input):
 def main():
     import numpy as np
 
-    with open('day5.txt', 'r') as f:
+    with open('day05.txt', 'r') as f:
         inp = np.array(f.read().split(','), dtype=np.int64)
     f.close()
 
